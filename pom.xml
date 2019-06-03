@@ -17,6 +17,12 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		
+		<!-- devtools
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-devtools</artifactId>
+		</dependency>
+		 -->
 		<!-- Spring AOP(AspectJ) -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -55,6 +61,20 @@
 		
 		
 	</dependencies>
+	
+	
+	
+	<build>
+		<finalName>$artifactId</finalName>
+		<plugins>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<warSourceDirectory>src/main/webapp</warSourceDirectory>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
 
 
